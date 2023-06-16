@@ -1,0 +1,26 @@
+{
+  "name": "final-nasa-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm-run-all --parallel install-server install-client",
+    "server": "npm run watch --prefix server",
+    "client": "npm start --prefix client",
+    "watch": "npm-run-all --parallel server client",
+    "deploy-client": "npm run build --prefix client",
+    "deploy": "npm-run-all --parallel deploy-client server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
+    "npm-run-all": "^4.1.5"
+  }
+}
